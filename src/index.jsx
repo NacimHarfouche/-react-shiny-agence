@@ -1,16 +1,12 @@
 import React from 'react'
-import { render } from 'react-dom'
+import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Home from './pages/Home/Home'
+import Home from './pages/Home'
 import Survey from './pages/Survey'
 import Header from './components/Header'
 import Error from './components/Error'
-import Results from './pages/Results'
-import Freelances from './pages/Freelances'
 
-const root = document.getElementById('root')
-
-render(
+ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Header />
@@ -18,20 +14,14 @@ render(
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/survey:questionNumber">
+        <Route path="/survey/:questionNumber">
           <Survey />
         </Route>
         <Route>
           <Error />
         </Route>
-        <Route>
-          <Results path="/results" />
-        </Route>
-        <Route>
-          <Freelances path="/freelances" />
-        </Route>
       </Switch>
     </Router>
   </React.StrictMode>,
-  root
+  document.getElementById('root')
 )

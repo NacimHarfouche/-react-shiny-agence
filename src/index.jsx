@@ -20,7 +20,7 @@ ReactDOM.render(
           <Survey />
         </Route>
         <Route>
-          <Error />
+          <Error part="*" />
         </Route>
         <Route>
           <Results path="/results" />

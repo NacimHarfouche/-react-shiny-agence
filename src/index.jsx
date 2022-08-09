@@ -20,13 +20,13 @@ ReactDOM.render(
           <Survey />
         </Route>
         <Route>
-          <Error part="*" />
-        </Route>
-        <Route>
           <Results path="/results" />
         </Route>
         <Route>
           <Freelances path="freelances" />
+        </Route>
+        <Route>
+          <Error part="*" />
         </Route>
       </Switch>
     </Router>
